@@ -1,9 +1,10 @@
 import React from "react";
+import SatMap from "../map/SatMap";
 
 function Home() {
     return (
         <div className="home">
-            <h1>Home</h1>
+            <SatMap></SatMap> 
         </div>
     );
 }
