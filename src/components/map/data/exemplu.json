@@ -1,0 +1,207 @@
+{
+    "type": "FeatureCollection",
+    "features":
+    [
+        {
+            "data": [
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb350.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb351.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb352.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb353.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb354.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb355.ndvi.png"
+                }
+            ],
+            "_id": "5ffc9218b0e8a800a1e1bb35",
+            "uid": "0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            25.212335586547848,
+                            43.90079915690249
+                        ],
+                        [
+                            25.228557586669922,
+                            43.88694436202739
+                        ],
+                        [
+                            25.263404846191406,
+                            43.90815820561971
+                        ],
+                        [
+                            25.24726867675781,
+                            43.92194624213538
+                        ],
+                        [
+                            25.212335586547848,
+                            43.90079915690249
+                        ]
+                    ]
+                ]
+            },
+            "__v": 0
+        },
+        {
+            "data": [
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb360.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb361.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb362.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb363.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb364.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb365.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb360.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb361.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb362.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb363.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb364.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb365.ndvi.png"
+                }
+            ],
+            "_id": "5ffc9218b0e8a800a1e1bb36",
+            "uid": "0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            25.220146179199215,
+                            43.929488120887264
+                        ],
+                        [
+                            25.228986740112305,
+                            43.92231717656174
+                        ],
+                        [
+                            25.250530242919922,
+                            43.935483850319756
+                        ],
+                        [
+                            25.242290496826172,
+                            43.94215879665083
+                        ],
+                        [
+                            25.220146179199215,
+                            43.929488120887264
+                        ]
+                    ]
+                ]
+            },
+            "__v": 0
+        },
+        {
+            "data": [
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb370.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb371.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb372.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb373.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb374.ndvi.png"
+                },
+                {
+                    "date": "2020-08-15",
+                    "link": "https://ceres-analyzed-data.s3.eu-central-1.amazonaws.com/5ffc9218b0e8a800a1e1bb375.ndvi.png"
+                }
+            ],
+            "_id": "5ffc9218b0e8a800a1e1bb37",
+            "uid": "0",
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            25.180320739746094,
+                            43.92528456871376
+                        ],
+                        [
+                            25.193452835083008,
+                            43.913785099633266
+                        ],
+                        [
+                            25.20512580871582,
+                            43.92095707235834
+                        ],
+                        [
+                            25.19190788269043,
+                            43.931898847648675
+                        ],
+                        [
+                            25.180320739746094,
+                            43.92528456871376
+                        ]
+                    ]
+                ]
+            },
+            "__v": 0
+        }
+    ]
+}
