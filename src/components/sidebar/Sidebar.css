@@ -9,6 +9,9 @@
     border: 1px solid;
     overflow: auto;
     border-color: #bfbfbf;
+    background-color: #fff;
+    z-index: 1000;
+    position: absolute;
 }
 
 .menu-bars {
@@ -55,6 +58,7 @@
     left: -100%;
     transition: 850ms;
     border-right: 1px solid #bfbfbf;
+    z-index: 1000;
 }
 
 .nav-menu.active {
