@@ -1,0 +1,32 @@
+--extra-index-url https://packages.dea.ga.gov.au/
+aiohttp
+aiobotocore[boto3,awscli]==1.0.7
+pyyaml==5.3.1
+wget
+requests
+datacube
+odc-algo
+odc-aws
+odc-aio
+odc-apps-cloud
+odc-apps-dc-tools
+odc-ui
+odc-index
+# Pinned for Alex to index STAC.
+sat-search==0.3.0
+# Jupyter components.
+gdal
+scipy
+jupyter==1.0.0
+jupyterlab==2.2.6
+ipyleaflet==0.13.0
+folium
+pandas==1.0.5
+xarray==0.16.0
+matplotlib==3.2.1
+geopandas
+scikit-image
+tqdm
+kafka-python
+rasterstats
+Pillow
