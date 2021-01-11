@@ -1,0 +1,101 @@
+version: '3.4'
+
+services:
+  api-gateway:
+    image: api-gateway
+    build:
+      context: ./api-gateway
+      dockerfile: ./Dockerfile
+    ports: 
+      - 5000:9090
+    volumes:
+      - ./api-gateway:/usr/src/app
+    
+  parcel-manager-server:
+    image: parcel-manager-server
+    build:
+      context: ./parcel-manager-server
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 8080:8080
+    volumes: 
+      - ./parcel-manager-server:/usr/src/app
+    depends_on:
+      - api-gateway
+      - mongodb
+      - kafka
+
+  parcel-analyzer-server:
+    build:
+      context: ./parcel-analyzer-server
+      dockerfile: ./Dockerfile
+    environment:
+      - DB_HOSTNAME=postgres
+      - DB_USERNAME=opendatacube
+      - DB_PASSWORD=opendatacubepassword
+      - DB_DATABASE=opendatacube
+      - AWS_NO_SIGN_REQUEST=true
+      - STAC_API_URL=https://earth-search.aws.element84.com/v0/
+    ports:
+      - "80:8888"
+    volumes:
+      - ./parcel-analyzer-server:/notebooks
+    restart: always
+    command: jupyter notebook --allow-root --ip="0.0.0.0" --NotebookApp.token='secretpassword'
+    depends_on: 
+      - postgres
+      - kafka
+    
+
+  postgres:
+    image: postgis/postgis:10-2.5
+    environment:
+      - POSTGRES_DB=opendatacube
+      - POSTGRES_PASSWORD=opendatacubepassword
+      - POSTGRES_USER=opendatacube
+    ports:
+      - 5432:5432
+    restart: always
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes: 
+      - data:/data/db
+
+  mongodb-admin:
+    image: mongo-express:latest
+    environment: 
+      ME_CONFIG_MONGODB_SERVER: "mongodb"
+    ports: 
+      - 8081:8081
+    depends_on: 
+      - mongodb
+  
+  zookeeper:
+    image: wurstmeister/zookeeper
+    container_name: zookeeper
+    ports: 
+      - 2181:2181
+    
+  kafka:
+    image: wurstmeister/kafka
+    ports: 
+      - 9092:9092
+    environment: 
+      KAFKA_ADVERTISED_HOST_NAME: kafka
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_CREATE_TOPICS: "parcels:1:1"
+    volumes: 
+      - kafka:/kafka
+
+    depends_on: 
+      - zookeeper
+
+volumes: 
+  data:
+  kafka:
