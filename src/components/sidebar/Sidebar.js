@@ -110,7 +110,7 @@ function Sidebar(props) {
                                     </div>
                                     <div className="navbar-profile-info">
                                         <h3 className="info-name">User Name</h3>
-                                        <Link to="#" className="info-logout">
+                                        <Link to="/" className="info-logout">
                                             Log out
                                         </Link>
                                     </div>

@@ -1,9 +1,11 @@
 import React from "react";
+import Sidebar from "../sidebar/Sidebar";
 
 function Products() {
     return (
-        <div className="products">
-            <h1>Products</h1>
+        <div>
+            <Sidebar />
+            <h1 className="products">Products</h1>
         </div>
     );
 }
