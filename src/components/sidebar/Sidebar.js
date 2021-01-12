@@ -154,7 +154,7 @@ function Sidebar(props) {
                             <li className="nav-text add-parcel">
                                 <Form onSubmit={(event) => {
                                     event.preventDefault();
-                                    axios.post("http://localhost:5000/parcels", geojson, {
+                                    axios.post("http://localhost:9090/parcels", geojson, {
                                         headers: {
                                             'Authorization': `Bearer ${localStorage.getItem("Auth")}`
                                         }
