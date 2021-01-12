@@ -22,6 +22,7 @@ function Sidebar(props) {
         "../../assets/user.svg"
     );
     const [selectedDate, setSelectedDate] = useState(new Date("08/15/2020"));
+    const [geojson, setGeojson] = useState("");
 
     const showSidebar = () => setSidebar(!sidebar);
     const showCalendar = () => setCalendar(!calendar);
@@ -61,6 +62,7 @@ function Sidebar(props) {
             shp(arrayBuffer)
                 .then(function (geojson) {
                     console.log(geojson);
+                    setGeojson(geojson);
                 })
                 .catch((error) => {
                     console.log(error);
@@ -150,7 +152,14 @@ function Sidebar(props) {
                         </li>
                         {showAddParcelForm ? (
                             <li className="nav-text add-parcel">
-                                <Form>
+                                <Form onSubmit={(event) => {
+                                    event.preventDefault();
+                                    axios.post("http://localhost:5000/parcels", geojson, {
+                                        headers: {
+                                            'Authorization': `Bearer ${localStorage.getItem("Auth")}`
+                                        }
+                                    })
+                                }}>
                                     <Form.Group controlId="formBasicEmail">
                                         <Form.Label>Parcel name</Form.Label>
                                         <Form.Control
