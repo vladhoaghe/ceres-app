@@ -1,12 +1,12 @@
 import React from "react";
-import SatMap from "../map/SatMap";
+import MyFuncSatMap from "../map/MyFuncSatMap";
 import Sidebar from "../sidebar/Sidebar";
 
 function Home() {
     return (
         <div className="home">
             <Sidebar />
-            <SatMap></SatMap> 
+            <MyFuncSatMap></MyFuncSatMap>
         </div>
     );
 }

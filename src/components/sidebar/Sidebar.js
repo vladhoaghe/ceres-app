@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -11,19 +11,20 @@ import Form from "react-bootstrap/Form";
 import { FilePicker } from "react-file-picker";
 import axios, { post } from "axios";
 import shp from "shpjs";
-import jszip from "jszip";
-import JSZip from "jszip";
+import Calendar from "../Calendar/Calendar";
 
 function Sidebar(props) {
     const [sidebar, setSidebar] = useState(false);
     const [showAddParcelForm, setShowAddParcelForm] = useState(false);
+    const [calendar, setCalendar] = useState(false);
     const [addParcelInfo, setAddParcelInfo] = useState("");
     const [profilePhotoSrc, setProfilePhotoSrc] = useState(
         "../../assets/user.svg"
     );
-    const [selectedDate, setSelectedDate] = useState("");
+    const [selectedDate, setSelectedDate] = useState(new Date("08/15/2020"));
 
     const showSidebar = () => setSidebar(!sidebar);
+    const showCalendar = () => setCalendar(!calendar);
     const months = [
         "Jan",
         "Feb",
@@ -67,23 +68,35 @@ function Sidebar(props) {
         };
     };
 
-    useEffect(() => {
-        setSelectedDate(getDateString(new Date("08/15/2020")));
-    }, []);
-
     return (
         <>
             <IconContext.Provider value={{ color: "#afaeab" }}>
-                <div className="sidebar">
-                    <Link to="#" className="menu-bars">
-                        <FaIcons.FaBars onClick={showSidebar} color="#494646" />
-                    </Link>
-                    <Link to="#" className="menu-parcel-title">
-                        <h2>{selectedDate}</h2>
-                    </Link>
-                    <Link to="#" className="menu-search">
-                        <FaIcons.FaSearch color="#494646" />
-                    </Link>
+                <div className="sidebar-container">
+                    <div className="sidebar">
+                        <Link to="#" className="menu-bars">
+                            <FaIcons.FaBars
+                                onClick={showSidebar}
+                                color="#494646"
+                            />
+                        </Link>
+                        <Link
+                            to="#"
+                            className="menu-parcel-title"
+                            onClick={showCalendar}
+                        >
+                            <h2>{getDateString(selectedDate)}</h2>
+                        </Link>
+                        <Link to="#" className="menu-search">
+                            <FaIcons.FaSearch color="#494646" />
+                        </Link>
+                    </div>
+                    {showCalendar ? (
+                        <Calendar
+                            datePickerIsOpen={calendar}
+                            selectedDate={selectedDate}
+                            changeSelectedDate={(date) => setSelectedDate(date)}
+                        />
+                    ) : null}
                 </div>
                 <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
                     <ul className="nav-menu-items">

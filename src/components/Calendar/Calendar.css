@@ -1,4 +1,13 @@
+.react-datepicker__input-container input {
+    background: transparent;
+    border: none;
+    color: transparent;
+}
 
-.rdrDayToday .rdrDayNumber span:after{
-    background: #46A346;
+.react-datepicker__input-container input:focus {
+    outline: none;
+}
+
+.react-datepicker-popper {
+    left: 20% !important;
 }
